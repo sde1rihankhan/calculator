@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Beautiful Calculator</title>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl p-6 w-full max-w-sm min-h-[600px] flex flex-col">
+        <!-- Calculator Display -->
+        <div class="bg-gray-900 rounded-2xl p-6 mb-6">
+            <div class="text-right">
+                <div id="previous-operand" class="text-gray-400 text-sm h-6 mb-2"></div>
+                <div id="current-operand" class="text-white text-4xl font-light tracking-wider">0</div>
+            </div>
+        </div>
+
+        <!-- Calculator Buttons -->
+        <div class="grid grid-cols-4 gap-3 flex-grow h-full min-h-0">
+            <!-- Row 1 -->
+            <button id="clear" class="calculator-btn bg-gray-200 hover:bg-gray-300 text-gray-800" data-action="clear">
+                AC
+            </button>
+            <button id="delete" class="cc bg-gray-200 hover:bg-gray-300 text-gray-800" data-action="delete">
+                DEL
+            </button>
+            <button id="percent" class="calculator-btn bg-gray-200 hover:bg-gray-300 text-gray-800"
+                data-action="percent">
+                %
+            </button>
+            <button id="operator" class="calculator-btn bg-orange-500 hover:bg-orange-600 text-white"
+                data-action="operator" data-operator="÷">
+                ÷
+            </button>
+
+            <!-- Row 2 -->
+            <button id="number" class="number calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800"
+                data-action="number" data-number="7">
+                7
+            </button>
+            <button id="number" class="number calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800"
+                data-action="number" data-number="8">
+                8
+            </button>
+            <button id="number" class="calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800" data-action="number"
+                data-number="9">
+                9
+            </button>
+            <button id="multiplay" class="calculator-btn bg-orange-500 hover:bg-orange-600 text-white"
+                data-action="operator" data-operator="×">
+                ×
+            </button>
+
+            <!-- Row 3 -->
+            <button id="number" class="calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800" data-action="number"
+                data-number="4">
+                4
+            </button>
+            <button id="number" class="calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800" data-action="number"
+                data-number="5">
+                5
+            </button>
+            <button id="number" class="calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800" data-action="number"
+                data-number="6">
+                6
+            </button>
+            <button id="manus" class="calculator-btn bg-orange-500 hover:bg-orange-600 text-white"
+                data-action="operator" data-operator="-">
+                -
+            </button>
+
+            <!-- Row 4 -->
+            <button id="number" class="calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800" data-action="number"
+                data-number="1">
+                1
+            </button>
+            <button id="number" class="calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800" data-action="number"
+                data-number="2">
+                2
+            </button>
+            <button id="number" class="calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800" data-action="number"
+                data-number="3">
+                3
+            </button>
+            <button id="plus" class="calculator-btn bg-orange-500 hover:bg-orange-600 text-white" data-action="operator"
+                data-operator="+">
+                +
+            </button>
+
+            <!-- Row 5 -->
+            <button id="number" class="calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800 col-span-2"
+                data-action="number" data-number="0">
+                0
+            </button>
+            <button id="decimal" class="calculator-btn bg-gray-100 hover:bg-gray-200 text-gray-800"
+                data-action="decimal">
+                .
+            </button>
+            <button id="equals" class="calculator-btn bg-orange-500 hover:bg-orange-600 text-white"
+                data-action="equals">
+                =
+            </button>
+        </div>
+    </div>
+
+    <style>
+        .calculator-btn {
+            @apply w-full h-full rounded-2xl text-xl font-medium transition-all duration-200 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-orange-300;
+        }
+    </style>
+    <script src="./script.js"></script>
+</body>
+
+</html>
